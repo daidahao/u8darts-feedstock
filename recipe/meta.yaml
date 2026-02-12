@@ -1,16 +1,15 @@
-{% set version = "0.40.0" %}
-{% set pypi_package_name = "u8darts" %}
+{% set version = "0.41.0" %}
 
 package:
   name: u8darts
   version: {{ version }}
 
 source:
-  git_url: https://github.com/daidahao/darts # use zhihao's fork until PR #2979 is merged
+  git_url: https://github.com/unit8co/darts
   git_rev: {{ version }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
 
 outputs:
@@ -30,8 +29,8 @@ outputs:
         - matplotlib-base >=3.3.0
         - narwhals >=1.25.1
         - nfoursid >=1.0.0
-        - numpy >=1.19.0
-        - pandas >=1.0.5
+        - numpy >=2.2.0
+        - pandas >=2.2.0
         - pyod >=0.9.5
         - requests >=2.22.0
         - scikit-learn >=1.6.0,<1.8.0
@@ -39,7 +38,7 @@ outputs:
         - shap >=0.40.0
         - statsmodels >=0.14.0
         - tqdm >=4.60.0
-        - typing-extensions
+        - typing-extensions>=4.0.0
         - xarray >=0.17.0
     test:
       imports:
